@@ -3,7 +3,7 @@
 # 🌦️ AuraCast
 ### پلتفرم حرفه‌ای پیش‌بینی آب‌وهوا 
 
-**طراحی و توسعه: [محمدعلی بزازی](#) — Mohammadali Bazzazi**
+**طراحی و توسعه: [محمدعلی بزازی](https://github.com/bazzazi/) — Mohammadali Bazzazi**
 
 ![Version](https://img.shields.io/badge/version-1.0.0-7df9ff?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Proprietary-ff6ec4?style=for-the-badge)
