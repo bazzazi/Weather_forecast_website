@@ -1,0 +1,226 @@
+<!--
+  ============================================================
+   AuraCast — Interactive Weather Forecast Platform
+   طراحی و توسعه: محمدعلی بزازی  (Mohammadali Bazzazi)
+   © 2026 Mohammadali Bazzazi — All Rights Reserved.
+   هرگونه کپی‌برداری، بازنشر یا استفادهٔ تجاری بدون اجازهٔ
+   کتبی طراح ممنوع است.
+  ============================================================
+-->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Mohammadali Bazzazi - محمدعلی بزازی" />
+  <meta name="designer" content="Mohammadali Bazzazi" />
+  <meta name="copyright" content="© Mohammadali Bazzazi" />
+  <meta name="description" content="AuraCast — پلتفرم حرفه‌ای پیش‌بینی آب‌وهوا با نقشه‌های تعاملی. طراحی محمدعلی بزازی." />
+  <title>AuraCast • پیش‌بینی هوشمند آب‌وهوا — طراحی محمدعلی بزازی</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet (interactive maps) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated aurora background -->
+  <div class="aurora">
+    <span class="aurora__blob aurora__blob--1"></span>
+    <span class="aurora__blob aurora__blob--2"></span>
+    <span class="aurora__blob aurora__blob--3"></span>
+    <div class="aurora__grid"></div>
+  </div>
+
+  <!-- Top Navigation -->
+  <header class="nav">
+    <div class="nav__brand">
+      <div class="logo">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#7df9ff"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#lg)" d="M22 19a6 6 0 1 0-11.7-2A5 5 0 0 0 11 27h11a4 4 0 0 0 0-8z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-name">AuraCast</div>
+        <div class="brand-tag">Live Weather Intelligence</div>
+      </div>
+    </div>
+
+    <nav class="nav__links">
+      <a href="#dashboard">داشبورد</a>
+      <a href="#map">نقشهٔ تعاملی</a>
+      <a href="#forecast">پیش‌بینی</a>
+      <a href="#about">دربارهٔ پروژه</a>
+    </nav>
+
+    <div class="search">
+      <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="m21 20-5.6-5.6a8 8 0 1 0-1.4 1.4L19.6 21zM4 10a6 6 0 1 1 12 0 6 6 0 0 1-12 0z"/></svg>
+      <input id="searchInput" type="text" placeholder="جستجوی شهر (مثلاً Tehran, Paris, Tokyo)…" autocomplete="off"/>
+      <button id="searchBtn">جستجو</button>
+      <div id="suggest" class="suggest" hidden></div>
+    </div>
+  </header>
+
+  <!-- HERO / Dashboard -->
+  <main id="dashboard" class="hero">
+    <section class="hero__main glass">
+      <div class="hero__head">
+        <div>
+          <div class="hero__location" id="locName">در حال بارگذاری…</div>
+          <div class="hero__time"   id="locTime">—</div>
+        </div>
+        <div class="hero__chips">
+          <span class="chip" id="chipCondition">—</span>
+          <span class="chip chip--ghost" id="chipCoords">—</span>
+        </div>
+      </div>
+
+      <div class="hero__body">
+        <div class="hero__temp">
+          <div class="temp" id="tempNow">--°</div>
+          <div class="temp__meta">
+            <div>احساس می‌شود: <b id="tempFeels">--°</b></div>
+            <div>کمینه/بیشینه: <b id="tempMin">--</b> / <b id="tempMax">--</b></div>
+          </div>
+        </div>
+
+        <div class="hero__icon" id="heroIcon" aria-hidden="true"></div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric"><span>رطوبت</span><b id="mHum">--%</b></div>
+        <div class="metric"><span>باد</span><b id="mWind">-- km/h</b></div>
+        <div class="metric"><span>فشار</span><b id="mPres">-- hPa</b></div>
+        <div class="metric"><span>دید</span><b id="mVis">-- km</b></div>
+        <div class="metric"><span>UV</span><b id="mUv">--</b></div>
+        <div class="metric"><span>ابرناکی</span><b id="mCloud">--%</b></div>
+      </div>
+    </section>
+
+    <aside class="hero__side">
+      <div class="glass card">
+        <div class="card__title">طلوع و غروب</div>
+        <div class="sun">
+          <svg viewBox="0 0 200 100" class="sun__arc">
+            <path d="M10,90 A90,90 0 0,1 190,90" fill="none" stroke="url(#sg)" stroke-width="2" stroke-dasharray="4 6"/>
+            <defs><linearGradient id="sg" x1="0" x2="1"><stop offset="0" stop-color="#ffb84d"/><stop offset="1" stop-color="#ff6ec4"/></linearGradient></defs>
+            <circle id="sunDot" cx="100" cy="10" r="6" fill="#ffd166"/>
+          </svg>
+          <div class="sun__times">
+            <div><span>طلوع</span><b id="sunrise">—</b></div>
+            <div><span>غروب</span><b id="sunset">—</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass card">
+        <div class="card__title">کیفیت هوا (AQI)</div>
+        <div class="aqi">
+          <div class="aqi__ring">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" stroke="rgba(255,255,255,.08)" stroke-width="10" fill="none"/>
+              <circle id="aqiRing" cx="60" cy="60" r="50" stroke="url(#ag)" stroke-width="10" fill="none"
+                stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="314" transform="rotate(-90 60 60)"/>
+              <defs><linearGradient id="ag" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
+            </svg>
+            <div class="aqi__val"><b id="aqiVal">--</b><span id="aqiLabel">—</span></div>
+          </div>
+          <ul class="aqi__list">
+            <li>PM2.5 <b id="pm25">—</b></li>
+            <li>PM10 <b id="pm10">—</b></li>
+            <li>O₃ <b id="o3">—</b></li>
+            <li>NO₂ <b id="no2">—</b></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Interactive Map -->
+  <section id="map" class="section">
+    <div class="section__head">
+      <div>
+        <h2>نقشهٔ تعاملی آب‌وهوا</h2>
+        <p>لایه‌های زنده از OpenWeatherMap روی نقشهٔ پایه. روی نقشه کلیک کنید تا برای هر نقطه پیش‌بینی دریافت کنید.</p>
+      </div>
+      <div class="map__layers" role="tablist">
+        <button data-layer="clouds"  class="layer-btn is-active">☁️ ابر</button>
+        <button data-layer="precipitation" class="layer-btn">🌧️ بارش</button>
+        <button data-layer="temp"    class="layer-btn">🌡️ دما</button>
+        <button data-layer="wind"    class="layer-btn">💨 باد</button>
+        <button data-layer="pressure" class="layer-btn">📈 فشار</button>
+      </div>
+    </div>
+    <div id="leafletMap" class="map glass"></div>
+    <div class="map__legend glass">
+      <span class="dot" style="background:#60a5fa"></span> سرد
+      <span class="bar"></span>
+      <span class="dot" style="background:#facc15"></span> معتدل
+      <span class="bar"></span>
+      <span class="dot" style="background:#ef4444"></span> گرم
+      <span class="hint">روی نقشه کلیک کنید تا داشبورد به آن نقطه منتقل شود.</span>
+    </div>
+  </section>
+
+  <!-- Hourly + Daily -->
+  <section id="forecast" class="section">
+    <div class="section__head">
+      <div>
+        <h2>پیش‌بینی ساعتی و روزانه</h2>
+        <p>۲۴ ساعت آینده و ۷ روز پیشِ‌رو با شاخص‌های دقیق.</p>
+      </div>
+    </div>
+
+    <div class="glass hourly">
+      <div class="hourly__scroll" id="hourly"></div>
+    </div>
+
+    <div class="daily" id="daily"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section about">
+    <div class="glass about__box">
+      <h2>دربارهٔ این پروژه</h2>
+      <p>
+        <b>AuraCast</b> یک قالب حرفه‌ای و مدرن برای نمایش پیش‌بینی آب‌وهوا با
+        نقشه‌های تعاملی است. این پروژه با تمرکز بر تجربهٔ کاربری، دسترس‌پذیری،
+        گرافیک هنری (گلس‌مورفیسم، گرادیان‌های Aurora) و داده‌های واقعی از
+        APIهای Open-Meteo و OpenWeatherMap طراحی شده است.
+      </p>
+      <div class="signature">
+        <div class="signature__line"></div>
+        <div class="signature__name">
+          طراحی و توسعه: <b>محمدعلی بزازی</b>
+          <span>Designed &amp; Developed by Mohammadali Bazzazi</span>
+        </div>
+        <div class="signature__line"></div>
+      </div>
+      <p class="copy">© 2026 Mohammadali Bazzazi — تمامی حقوق محفوظ است. هرگونه کپی‌برداری بدون اجازهٔ کتبی، پیگرد قانونی دارد.</p>
+    </div>
+  </section>
+
+  <!-- Floating watermark (anti-copy notice) -->
+  <div class="watermark" aria-hidden="true">طراحی • محمدعلی بزازی • Mohammadali Bazzazi</div>
+
+  <footer class="footer">
+    <span>AuraCast © 2026</span>
+    <span>ساخته‌شده با ❤ توسط <b>محمدعلی بزازی</b></span>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
