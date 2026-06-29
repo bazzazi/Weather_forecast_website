@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="[مسیر-لوگو-یا-بنر]" alt="لوگوی AuraCast" width="200"/>
   <h1>AuraCast</h1>
   <h3>قالب حرفه‌ای و مدرن پیش‌بینی آب‌وهوا</h3>
   <p>
@@ -17,9 +16,9 @@
 
 | دسکتاپ | موبایل |
 |:---:|:---:|
-| ![دسکتاپ]([لینک-تصویر-دسکتاپ]) | ![موبایل]([لینک-تصویر-موبایل]) |
+| ![دسکتاپ]([https://github.com/bazzazi/Weather_forecast_website/blob/main/Screenshots/shot_desktop.png]) | ![موبایل]([https://github.com/bazzazi/Weather_forecast_website/blob/main/Screenshots/shot_desktop.png]) |
 
-> 🎥 **دموی زنده:** [مشاهده نسخه‌ی آنلاین]([لینک-سایت-اجرایی-مثل-vercel-یا-netlify])
+> 🎥 **دموی زنده:** [مشاهده نسخه‌ی آنلاین]([https://weatherforcastwebsite.netlify.app/])
 
 ---
 
