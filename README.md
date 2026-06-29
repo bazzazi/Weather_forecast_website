@@ -1,129 +1,64 @@
 <div align="center">
-
-# 🌦️ AuraCast
-### پلتفرم حرفه‌ای پیش‌بینی آب‌وهوا 
-
-**طراحی و توسعه: [محمدعلی بزازی](https://github.com/bazzazi/) — Mohammadali Bazzazi**
-
-![Version](https://img.shields.io/badge/version-1.0.0-7df9ff?style=for-the-badge)
-![License](https://img.shields.io/badge/license-Proprietary-ff6ec4?style=for-the-badge)
-![Stack](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JS-8b5cf6?style=for-the-badge)
-
+  <img src="[مسیر-لوگو-یا-بنر]" alt="لوگوی AuraCast" width="200"/>
+  <h1>AuraCast</h1>
+  <h3>قالب حرفه‌ای و مدرن پیش‌بینی آب‌وهوا</h3>
+  <p>
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+    <img src="https://img.shields.io/github/stars/bazzazi/Weather_forecast_website?style=for-the-badge" />
+    <img src="https://img.shields.io/github/license/bazzazi/Weather_forecast_website?style=for-the-badge" />
+  </p>
 </div>
+
+---
+
+## 📸 پیش‌نمایش (Screenshots)
+
+| دسکتاپ | موبایل |
+|:---:|:---:|
+| ![دسکتاپ]([لینک-تصویر-دسکتاپ]) | ![موبایل]([لینک-تصویر-موبایل]) |
+
+> 🎥 **دموی زنده:** [مشاهده نسخه‌ی آنلاین]([لینک-سایت-اجرایی-مثل-vercel-یا-netlify])
 
 ---
 
 ## 📖 معرفی
 
-**AuraCast** یک قالب فول‌فرانت‌اند، مدرن و آینده‌نگرانه برای نمایش وضعیت آب‌وهوا است که با ترکیبی از **Glassmorphism**، گرادیان‌های **Aurora** و انیمیشن‌های نرم، تجربه‌ای در سطح Awwwards ارائه می‌دهد.
+**AuraCast** یک قالب فول‌فرانت‌اند، مدرن و آینده‌نگرانه برای نمایش وضعیت آب‌وهوا است. این پروژه با ترکیبی از **Glassmorphism**، گرادیان‌های **Aurora** و انیمیشن‌های نرم، تجربه‌ای کاربری در سطح وب‌سایت‌های برجسته ارائه می‌دهد.
 
-برخلاف ویجت‌های ساده‌ی آب‌وهوا، AuraCast یک **نقشهٔ تعاملی واقعی** بر پایهٔ **Leaflet** دارد که لایه‌های زندهٔ ابر، بارش، دما، باد و فشار را از **OpenWeatherMap** روی نقشه پایه تاریک نمایش می‌دهد و با کلیک کاربر روی هر نقطه از کرهٔ زمین، داشبورد را به آن مختصات منتقل می‌کند.
-
----
-
-## ✨ ویژگی‌ها
-
-- 🗺️ **نقشه تعاملی چند لایه‌ای** (ابر، بارش، دما، باد، فشار) با Leaflet + OpenWeatherMap
-- 🔍 **جستجوی هوشمند شهر** با پیشنهاد لحظه‌ای از Open-Meteo Geocoding
-- 📍 **شناسایی خودکار موقعیت کاربر** با Geolocation API
-- 🌡️ **داشبورد فعلی**: دما، احساس واقعی، رطوبت، باد، فشار، دید، UV، ابرناکی
-- 🕒 **پیش‌بینی ساعتی ۲۴ ساعت آینده** به‌صورت اسکرول افقی
-- 📅 **پیش‌بینی هفتگی ۷ روزه** با نمودار میله‌ای محدودهٔ دما
-- 🌅 **کمان طلوع و غروب** پویا با موقعیت لحظه‌ای خورشید
-- 💨 **شاخص کیفیت هوا (AQI)** اروپایی همراه با PM2.5، PM10، O₃، NO₂
-- 🌐 **پشتیبانی کامل از RTL** و زبان فارسی با فونت Vazirmatn
-- 📱 **کاملاً Responsive** برای موبایل، تبلت و دسکتاپ
-- 🎭 **تم تاریک پیش‌فرض** با افکت‌های Glassmorphism و Aurora متحرک
+برخلاف ویجت‌های ساده، AuraCast شامل یک **نقشهٔ تعاملی واقعی** بر پایهٔ **Leaflet** است که لایه‌های زندهٔ ابر، بارش، دما، باد و فشار را از **OpenWeatherMap** روی نقشه پایه تاریک نمایش می‌دهد. کاربر با کلیک روی هر نقطه از کرهٔ زمین، داشبورد را به آن مختصات منتقل می‌کند.
 
 ---
 
-## 🚀 راه‌اندازی
+## ✨ ویژگی‌های کلیدی
+
+| دسته‌بندی | ویژگی |
+|:---|:---|
+| **نقشه** | نقشه تعاملی چند لایه‌ای (ابر، بارش، دما، باد، فشار) با Leaflet + OpenWeatherMap |
+| **جستجو** | جستجوی هوشمند شهر با پیشنهاد لحظه‌ای از Open-Meteo Geocoding |
+| **موقعیت‌یابی** | شناسایی خودکار موقعیت کاربر با Geolocation API |
+| **داشبورد لحظه‌ای** | نمایش دما، احساس واقعی، رطوبت، باد، فشار، دید، UV و ابرناکی |
+| **پیش‌بینی ساعتی** | نمایش ۲۴ ساعت آینده به‌صورت اسکرول افقی |
+| **پیش‌بینی هفتگی** | نمایش ۷ روز آینده با نمودار میله‌ای محدودهٔ دما |
+| **طلوع و غروب** | کمان پویا با موقعیت لحظه‌ای خورشید |
+| **کیفیت هوا** | شاخص کیفیت هوا (AQI) اروپایی همراه با PM2.5، PM10، O₃، NO₂ |
+| **پشتیبانی از RTL** | پشتیبانی کامل از زبان فارسی با فونت Vazirmatn |
+| **رسپانسیو** | کاملاً واکنش‌گرا برای موبایل، تبلت و دسکتاپ |
+| **تم بصری** | تم تاریک پیش‌فرض با افکت‌های Glassmorphism و Aurora متحرک |
+
+---
+
+## 🚀 راه‌اندازی سریع
 
 این پروژه **هیچ وابستگی، بیلد یا نصب پکیجی** ندارد. کافی است:
 
 ```bash
-# 1. فایل‌ها را در یک پوشه قرار دهید
-weather-site/
-├── index.html
-├── styles.css
-├── script.js
-└── README.md
+# ۱. مخزن را کلون کنید
+git clone https://github.com/bazzazi/Weather_forecast_website.git
 
-# 2. فایل index.html را در مرورگر باز کنید
----
+# ۲. وارد پوشه شوید
+cd Weather_forecast_website
 
-## 🛠️ معماری فنی
-
-| لایه | تکنولوژی |
-|------|-----------|
-| **ساختار** | HTML5 سمنتیک، RTL |
-| **استایل** | CSS3 خالص + CSS Variables + Glassmorphism |
-| **منطق** | JavaScript ES2020+ (بدون فریم‌ورک) |
-| **نقشه** | [Leaflet 1.9.4](https://leafletjs.com) |
-| **لایه پایه نقشه** | CartoDB Dark Matter |
-| **لایه‌های آب‌وهوا** | [OpenWeatherMap Tiles](https://openweathermap.org/api/weathermaps) |
-| **داده آب‌وهوا** | [Open-Meteo API](https://open-meteo.com) (رایگان، بدون کلید) |
-| **داده کیفیت هوا** | [Open-Meteo Air Quality API](https://open-meteo.com/en/docs/air-quality-api) |
-| **Geocoding** | Open-Meteo Geocoding API |
-| **فونت** | Vazirmatn (فارسی) + Space Grotesk (انگلیسی) |
-
----
-
-## 🔑 تنظیمات (اختیاری)
-
-برای استفادهٔ Production از نقشهٔ آب‌وهوا، کلید رایگان خود را از [openweathermap.org](https://openweathermap.org/api) دریافت و در فایل `script.js` جایگزین کنید:
-
-```js
-const OWM_KEY = 'YOUR_API_KEY_HERE';
-```
-
-داده‌های اصلی پیش‌بینی (Open-Meteo) **نیازی به کلید API ندارند**.
-
----
-
-## 📂 ساختار فایل‌ها
-
-```
-weather-site/
-├── index.html        ← ساختار صفحه (نوار ابزار، داشبورد، نقشه، پیش‌بینی)
-├── styles.css        ← طراحی کامل سیستم (توکن‌ها، گلس، رسپانسیو)
-├── script.js         ← منطق API، نقشه، رندر داده‌ها
-└── README.md         ← این فایل
-```
-
----
-
-## 🎨 طراحی
-
-پالت رنگی الهام‌گرفته از شفق قطبی (**Aurora**):
-
-| نقش | رنگ |
-|------|------|
-| پس‌زمینه عمیق | `#070912` |
-| اولیه (Cyan) | `#7df9ff` |
-| ثانویه (Violet) | `#8b5cf6` |
-| تأکید (Pink) | `#ff6ec4` |
-| متن اصلی | `#e7ecff` |
-
----
-
-## ⚖️ حق نشر
-
-```
-© 2026 Mohammadali Bazzazi (محمدعلی بزازی)
-All Rights Reserved.
-
-```
-
----
-
-<div align="center">
-
-### 🌟 ساخته‌شده توسط
-
-# محمدعلی بزازی
-**Mohammadali Bazzazi**
-
-`Designer · Front-End Engineer · Visual Architect`
-
-</div>
+# ۳. فایل index.html را در مرورگر باز کنید
+# یا از Live Server در VS Code استفاده کنید
