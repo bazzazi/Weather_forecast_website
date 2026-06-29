@@ -16,9 +16,9 @@
 
 | دسکتاپ | موبایل |
 |:---:|:---:|
-| ![دسکتاپ]([https://github.com/bazzazi/Weather_forecast_website/blob/main/Screenshots/shot_desktop.png]) | ![موبایل]([https://github.com/bazzazi/Weather_forecast_website/blob/main/Screenshots/shot_desktop.png]) |
+| ![دسکتاپ](https://github.com/bazzazi/Weather_forecast_website/blob/main/Screenshots/shot_desktop.png) | ![موبایل](https://github.com/bazzazi/Weather_forecast_website/blob/main/Screenshots/shot_mobile.png) |
 
-> 🎥 **دموی زنده:** [مشاهده نسخه‌ی آنلاین]([https://weatherforcastwebsite.netlify.app/])
+> 🎥 **دموی زنده:** [مشاهده نسخه‌ی آنلاین](https://weatherforcastwebsite.netlify.app/)
 
 ---
 
@@ -61,3 +61,87 @@ cd Weather_forecast_website
 
 # ۳. فایل index.html را در مرورگر باز کنید
 # یا از Live Server در VS Code استفاده کنید
+```
+
+---
+
+## 🗂️ ساختار فایل‌ها
+
+```
+Weather_forecast_website/
+├── index.html    # ساختار صفحه (نوار ابزار، داشبورد، نقشه، پیش‌بینی)
+├── styles.css    # طراحی کامل سیستم (توکن‌ها، گلس، رسپانسیو)
+├── script.js     # منطق API، نقشه، رندر داده‌ها
+└── README.md     # این فایل
+```
+
+---
+
+## ⚙️ تنظیمات (اختیاری)
+
+برای استفادهٔ Production از نقشهٔ آب‌وهوا، کلید رایگان خود را از [OpenWeatherMap](https://openweathermap.org/api) دریافت و در فایل `script.js` جایگزین کنید:
+
+```js
+const OWM_KEY = 'YOUR_API_KEY_HERE';
+```
+
+> ℹ️ داده‌های اصلی پیش‌بینی (Open-Meteo) **نیازی به کلید API ندارند**.
+
+---
+
+## 🎨 طراحی و پالت رنگی
+
+پالت رنگی الهام‌گرفته از شفق قطبی (**Aurora**):
+
+| نقش | رنگ |
+|:---|:---|
+| پس‌زمینه عمیق | `#070912` |
+| اولیه (Cyan) | `#7df9ff` |
+| ثانویه (Violet) | `#8b5cf6` |
+| تأکید (Pink) | `#ff6ec4` |
+| متن اصلی | `#e7ecff` |
+
+---
+
+## 🛠️ معماری فنی
+
+| لایه | تکنولوژی |
+|:---|:---|
+| **ساختار** | HTML5 سمنتیک، RTL |
+| **استایل** | CSS3 خالص + CSS Variables + Glassmorphism |
+| **منطق** | JavaScript ES2020+ (بدون فریم‌ورک) |
+| **نقشه** | [Leaflet 1.9.4](https://leafletjs.com) |
+| **لایه پایه نقشه** | CartoDB Dark Matter |
+| **لایه‌های آب‌وهوا** | [OpenWeatherMap Tiles](https://openweathermap.org/api/weathermaps) |
+| **داده آب‌وهوا** | [Open-Meteo API](https://open-meteo.com) (رایگان، بدون کلید) |
+| **داده کیفیت هوا** | [Open-Meteo Air Quality API](https://open-meteo.com/en/docs/air-quality-api) |
+| **Geocoding** | Open-Meteo Geocoding API |
+| **فونت** | Vazirmatn (فارسی) + Space Grotesk (انگلیسی) |
+
+---
+
+## 🤝 مشارکت
+
+1. مخزن را **Fork** کنید
+2. یک **Branch** جدید بسازید (`git checkout -b feature/amazing-feature`)
+3. تغییرات خود را **Commit** کنید (`git commit -m 'Add some amazing feature'`)
+4. Branch را **Push** کنید (`git push origin feature/amazing-feature`)
+5. یک **Pull Request** باز کنید
+
+---
+
+## 📄 مجوز
+
+© 2026 محمدعلی بزازی (Mohammadali Bazzazi). تمامی حقوق محفوظ است.
+
+---
+
+## 👨‍💻 سازنده و طراح
+
+**طراحی و توسعه** توسط **محمدعلی بزازی** — Mohammadali Bazzazi  
+`Front-End Engineer · UI/UX Designer · Visual Architect`
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bazzazi)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/bazzazi)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/bazzazi)
+```
