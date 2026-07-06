@@ -139,9 +139,8 @@ const OWM_KEY = 'YOUR_API_KEY_HERE';
 ## 👨‍💻 سازنده و طراح
 
 **طراحی و توسعه** توسط **محمدعلی بزازی** — Mohammadali Bazzazi  
-`Front-End Engineer · UI/UX Designer · Visual Architect`
+`Full-Stack Dev · Mobile Dev · AI Dev`
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bazzazi)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/bazzazi)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/bazzazi)
 ```
