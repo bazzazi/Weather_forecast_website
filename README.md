@@ -1,6 +1,6 @@
 <div align="center">
   <h1>AuraCast</h1>
-  <h3>قالب حرفه‌ای و مدرن پیش‌بینی آب‌وهوا</h3>
+  <h3>Professional & Modern Weather Forecast Template</h3>
   <p>
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
     <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
@@ -12,123 +12,122 @@
 
 ---
 
-## 📸 پیش‌نمایش (Screenshots)
+## 📸 Screenshots
 
-| دسکتاپ | موبایل |
+| Desktop | Mobile |
 |:---:|:---:|
-| ![دسکتاپ](https://github.com/bazzazi/Weather_forecast_website/blob/main/Screenshots/shot_desktop.png) | ![موبایل](https://github.com/bazzazi/Weather_forecast_website/blob/main/Screenshots/shot_mobile.png) |
+| ![Desktop](https://github.com/bazzazi/Weather_forecast_website/blob/main/Screenshots/shot_desktop.png) | ![Mobile](https://github.com/bazzazi/Weather_forecast_website/blob/main/Screenshots/shot_mobile.png) |
 
-> 🎥 **دموی زنده:** [مشاهده نسخه‌ی آنلاین](https://weatherforcastwebsite.netlify.app/)
-
----
-
-## 📖 معرفی
-
-**AuraCast** یک قالب فول‌فرانت‌اند، مدرن و آینده‌نگرانه برای نمایش وضعیت آب‌وهوا است. این پروژه با ترکیبی از **Glassmorphism**، گرادیان‌های **Aurora** و انیمیشن‌های نرم، تجربه‌ای کاربری در سطح وب‌سایت‌های برجسته ارائه می‌دهد.
-
-برخلاف ویجت‌های ساده، AuraCast شامل یک **نقشهٔ تعاملی واقعی** بر پایهٔ **Leaflet** است که لایه‌های زندهٔ ابر، بارش، دما، باد و فشار را از **OpenWeatherMap** روی نقشه پایه تاریک نمایش می‌دهد. کاربر با کلیک روی هر نقطه از کرهٔ زمین، داشبورد را به آن مختصات منتقل می‌کند.
+> 🎥 **Live Demo:** [View Online Version](https://weatherforcastwebsite.netlify.app/)
 
 ---
 
-## ✨ ویژگی‌های کلیدی
+## 📖 Introduction
 
-| دسته‌بندی | ویژگی |
+**AuraCast** is a full‑frontend, modern, and futuristic template for displaying weather conditions. This project combines **Glassmorphism**, **Aurora** gradients, and smooth animations to deliver a user experience on par with top‑tier websites.
+
+Unlike simple widgets, AuraCast includes a **truly interactive map** based on **Leaflet** that displays live layers for clouds, precipitation, temperature, wind, and pressure from **OpenWeatherMap** over a dark base map. Users can click anywhere on the globe to move the dashboard to that location.
+
+---
+
+## ✨ Key Features
+
+| Category | Feature |
 |:---|:---|
-| **نقشه** | نقشه تعاملی چند لایه‌ای (ابر، بارش، دما، باد، فشار) با Leaflet + OpenWeatherMap |
-| **جستجو** | جستجوی هوشمند شهر با پیشنهاد لحظه‌ای از Open-Meteo Geocoding |
-| **موقعیت‌یابی** | شناسایی خودکار موقعیت کاربر با Geolocation API |
-| **داشبورد لحظه‌ای** | نمایش دما، احساس واقعی، رطوبت، باد، فشار، دید، UV و ابرناکی |
-| **پیش‌بینی ساعتی** | نمایش ۲۴ ساعت آینده به‌صورت اسکرول افقی |
-| **پیش‌بینی هفتگی** | نمایش ۷ روز آینده با نمودار میله‌ای محدودهٔ دما |
-| **طلوع و غروب** | کمان پویا با موقعیت لحظه‌ای خورشید |
-| **کیفیت هوا** | شاخص کیفیت هوا (AQI) اروپایی همراه با PM2.5، PM10، O₃، NO₂ |
-| **پشتیبانی از RTL** | پشتیبانی کامل از زبان فارسی با فونت Vazirmatn |
-| **رسپانسیو** | کاملاً واکنش‌گرا برای موبایل، تبلت و دسکتاپ |
-| **تم بصری** | تم تاریک پیش‌فرض با افکت‌های Glassmorphism و Aurora متحرک |
+| **Map** | Multi‑layer interactive map (clouds, precipitation, temperature, wind, pressure) with Leaflet + OpenWeatherMap |
+| **Search** | Smart city search with instant suggestions from Open‑Meteo Geocoding |
+| **Location** | Automatic user location detection via Geolocation API |
+| **Live Dashboard** | Displays temperature, real‑feel, humidity, wind, pressure, visibility, UV, and cloud cover |
+| **Hourly Forecast** | Shows the next 24 hours in a horizontal scroll |
+| **Weekly Forecast** | Displays the next 7 days with a bar chart of temperature ranges |
+| **Sunrise & Sunset** | Dynamic arc with real‑time sun position |
+| **Air Quality** | European Air Quality Index (AQI) with PM2.5, PM10, O₃, NO₂ |
+| **RTL Support** | Full Persian language support with Vazirmatn font |
+| **Responsive** | Fully responsive for mobile, tablet, and desktop |
+| **Visual Theme** | Dark theme by default with Glassmorphism effects and animated Aurora background |
 
 ---
 
-## 🚀 راه‌اندازی سریع
+## 🚀 Quick Start
 
-این پروژه **هیچ وابستگی، بیلد یا نصب پکیجی** ندارد. کافی است:
+This project has **no dependencies, builds, or package installations**. Simply:
 
 ```bash
-# ۱. مخزن را کلون کنید
+# 1. Clone the repository
 git clone https://github.com/bazzazi/Weather_forecast_website.git
 
-# ۲. وارد پوشه شوید
+# 2. Enter the folder
 cd Weather_forecast_website
 
-# ۳. فایل index.html را در مرورگر باز کنید
-# یا از Live Server در VS Code استفاده کنید
-```
+# 3. Open index.html in your browser
+# Or use Live Server in VS Code
 
 ---
 
-## 🗂️ ساختار فایل‌ها
+## 📁 File Structure
 
 ```
 Weather_forecast_website/
-├── index.html    # ساختار صفحه (نوار ابزار، داشبورد، نقشه، پیش‌بینی)
-├── styles.css    # طراحی کامل سیستم (توکن‌ها، گلس، رسپانسیو)
-├── script.js     # منطق API، نقشه، رندر داده‌ها
-└── README.md     # این فایل
+├── index.html    # Page structure (toolbar, dashboard, map, forecasts)
+├── styles.css    # Full design system (tokens, glass, responsive)
+├── script.js     # API logic, map, data rendering
+└── README.md     # This file
 ```
 
 ---
 
-## ⚙️ تنظیمات (اختیاری)
+## ⚙️ Configuration (Optional)
 
-برای استفادهٔ Production از نقشهٔ آب‌وهوا، کلید رایگان خود را از [OpenWeatherMap](https://openweathermap.org/api) دریافت و در فایل `script.js` جایگزین کنید:
+For production use of the weather map, get your free API key from [OpenWeatherMap](https://openweathermap.org/api) and replace it in `script.js`:
 
 ```js
 const OWM_KEY = 'YOUR_API_KEY_HERE';
 ```
 
-> ℹ️ داده‌های اصلی پیش‌بینی (Open-Meteo) **نیازی به کلید API ندارند**.
+> ℹ️ Main forecast data (Open‑Meteo) **does not require an API key**.
 
 ---
 
-## 🎨 طراحی و پالت رنگی
+## 🎨 Design & Color Palette
 
-پالت رنگی الهام‌گرفته از شفق قطبی (**Aurora**):
+The color palette is inspired by the **Aurora**:
 
-| نقش | رنگ |
+| Role | Color |
 |:---|:---|
-| پس‌زمینه عمیق | `#070912` |
-| اولیه (Cyan) | `#7df9ff` |
-| ثانویه (Violet) | `#8b5cf6` |
-| تأکید (Pink) | `#ff6ec4` |
-| متن اصلی | `#e7ecff` |
+| Deep Background | `#070912` |
+| Primary (Cyan) | `#7df9ff` |
+| Secondary (Violet) | `#8b5cf6` |
+| Accent (Pink) | `#ff6ec4` |
+| Main Text | `#e7ecff` |
 
 ---
 
-## 🛠️ معماری فنی
+## 🛠️ Technical Architecture
 
-| لایه | تکنولوژی |
+| Layer | Technology |
 |:---|:---|
-| **ساختار** | HTML5 سمنتیک، RTL |
-| **استایل** | CSS3 خالص + CSS Variables + Glassmorphism |
-| **منطق** | JavaScript ES2020+ (بدون فریم‌ورک) |
-| **نقشه** | [Leaflet 1.9.4](https://leafletjs.com) |
-| **لایه پایه نقشه** | CartoDB Dark Matter |
-| **لایه‌های آب‌وهوا** | [OpenWeatherMap Tiles](https://openweathermap.org/api/weathermaps) |
-| **داده آب‌وهوا** | [Open-Meteo API](https://open-meteo.com) (رایگان، بدون کلید) |
-| **داده کیفیت هوا** | [Open-Meteo Air Quality API](https://open-meteo.com/en/docs/air-quality-api) |
-| **Geocoding** | Open-Meteo Geocoding API |
-| **فونت** | Vazirmatn (فارسی) + Space Grotesk (انگلیسی) |
+| **Structure** | Semantic HTML5, RTL |
+| **Styling** | Pure CSS3 + CSS Variables + Glassmorphism |
+| **Logic** | JavaScript ES2020+ (no framework) |
+| **Map** | [Leaflet 1.9.4](https://leafletjs.com) |
+| **Base Map Layer** | CartoDB Dark Matter |
+| **Weather Layers** | [OpenWeatherMap Tiles](https://openweathermap.org/api/weathermaps) |
+| **Weather Data** | [Open‑Meteo API](https://open-meteo.com) (free, no key) |
+| **Air Quality Data** | [Open‑Meteo Air Quality API](https://open-meteo.com/en/docs/air-quality-api) |
+| **Geocoding** | Open‑Meteo Geocoding API |
+| **Fonts** | Vazirmatn (Persian) + Space Grotesk (English) |
 
 ---
 
-## 📄 مجوز
+## 📄 License
 
-© 2026 محمدعلی بزازی (Mohammadali Bazzazi). تمامی حقوق محفوظ است.
+© 2026 Mohammadali Bazzazi. All rights reserved.
 
 ---
 
-## 👨‍💻 سازنده و طراح
+## 👨‍💻 Author & Designer
 
-**طراحی و توسعه** توسط **محمدعلی بزازی** — Mohammadali Bazzazi  
+**Design & Development** by **Mohammadali Bazzazi**  
 `Full-Stack Dev · Mobile Dev · AI Dev`
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bazzazi)
