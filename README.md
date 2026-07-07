@@ -120,16 +120,6 @@ const OWM_KEY = 'YOUR_API_KEY_HERE';
 
 ---
 
-## 🤝 مشارکت
-
-1. مخزن را **Fork** کنید
-2. یک **Branch** جدید بسازید (`git checkout -b feature/amazing-feature`)
-3. تغییرات خود را **Commit** کنید (`git commit -m 'Add some amazing feature'`)
-4. Branch را **Push** کنید (`git push origin feature/amazing-feature`)
-5. یک **Pull Request** باز کنید
-
----
-
 ## 📄 مجوز
 
 © 2026 محمدعلی بزازی (Mohammadali Bazzazi). تمامی حقوق محفوظ است.
